@@ -91,7 +91,9 @@ public class Main {
 
         Student student = studentService.findById(id);
         if (student != null) {
-            System.out.print("Update email? (yes/no): ");
+            System.out.println("\nCurrent Student Details:");
+            displayStudent(student);
+            System.out.print(" Update email? (yes/no): ");
             if (scanner.nextLine().toLowerCase().startsWith("y")) {
                 System.out.print("Enter new email: ");
                 student.setEmail(scanner.nextLine());
